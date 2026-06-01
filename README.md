@@ -1,8 +1,6 @@
 # dtc-broken-form-bugs
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/REPLACE_ME/dtc-broken-form-bugs)
-
-> Replace `REPLACE_ME` with your GitHub username after you push this repo, then commit the README so the button works in the live repo.
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/chythra-w1/broken-form-template)
 
 ## What this template tests
 
