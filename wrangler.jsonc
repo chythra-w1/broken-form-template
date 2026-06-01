@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dtc-broken-form-bugs",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  // Vectorize binding — schema only allows binding/index_name/remote.
+  // There is NO way to declare dimensions or metric here, so the deploy
+  // form will show blank required fields for them.
+  "vectorize": [
+    {
+      "binding": "VECTOR_INDEX",
+      "index_name": "dtc-broken-form-bugs-index"
+    }
+  ],
+  // KV binding intentionally MISSING the "id" default value.
+  // Docs say defaults are required for successful deploy; this reproduces
+  // the "missing defaults" failure mode.
+  "kv_namespaces": [
+    {
+      "binding": "CACHE"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  }
+}

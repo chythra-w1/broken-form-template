@@ -1,0 +1,28 @@
+{
+  "name": "dtc-broken-form-bugs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.95.0",
+    "typescript": "^5.5.0",
+    "@cloudflare/workers-types": "^4.20260101.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "MCP_BEARER_TOKEN": {
+        "description": "**Leave this blank.** The Worker auto-generates a bearer token on first request and stores it in KV. You can override later with `wrangler secret put MCP_BEARER_TOKEN`."
+      },
+      "OPTIONAL_WEBHOOK_URL": {
+        "description": "Optional. Provide a webhook URL if you want event notifications, otherwise leave blank."
+      },
+      "VECTOR_INDEX": {
+        "description": "Vector index for semantic search. Uses `@cf/baai/bge-base-en-v1.5` (768 dimensions, cosine metric). The form will ask you to fill these in manually."
+      }
+    }
+  }
+}
